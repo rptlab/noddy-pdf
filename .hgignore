@@ -42,7 +42,11 @@ syntax: regexp
 ^local/
 ^[Ii]nclude/
 ^[Ll]ib/
+^lib64$
 ^[Ss]cripts/
 ^[Ss]hare/
 ^[Ss]elenium/
 ^\.?py\d+/
+^db.sqlite3$
+^pyvenv.cfg$
+^project/noddy/out/

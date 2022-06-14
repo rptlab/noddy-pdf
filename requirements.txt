@@ -1,0 +1,3 @@
+rlextra>=3.6.11,<3.7
+-i https://www.reportlab.com/pypi
+django

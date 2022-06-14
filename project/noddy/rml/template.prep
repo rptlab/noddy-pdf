@@ -1,0 +1,106 @@
+{{script}}
+import os
+cwd=os.getcwd()
+{{endscript}}<?xml version="1.0" encoding="iso-8859-1" standalone="no" ?> 
+<!DOCTYPE document SYSTEM "rml_1_0.dtd">
+<document filename="table_gradients.pdf">
+	<template pageSize="(595, 842)" leftMargin="72" showBoundary="1">
+		<pageTemplate id="main2">
+		<pageGraphics>
+		</pageGraphics>
+			<frame id="second" x1="35" y1="45" width="525" height="685"/>		</pageTemplate>
+	</template>
+	<stylesheet>
+		<blockTableStyle id="realplain">
+			<blockAlignment value="left"/>
+			<blockFont name="Helvetica"/>
+			<blockBottomPadding length="0"/>
+			<blockTopPadding length="0"/>
+			<blockLeftPadding length="0"/>
+			<blockRightPadding length="0"/>
+		</blockTableStyle>
+		<blockTableStyle id="plain">
+			<blockAlignment value="left"/>
+			<blockFont name="Helvetica"/>
+			<lineStyle kind="GRID" colorName="black"/>
+			<lineStyle kind="OUTLINE" colorName="black" thickness="2"/>
+			<blockBottomPadding length="0"/>
+			<blockTopPadding length="0"/>
+			<blockLeftPadding length="0"/>
+			<blockRightPadding length="0"/>
+		</blockTableStyle>
+		<blockTableStyle id="plainlg" parent="plain">
+			<blockBackground start="1,1" stop="1,1" colorName="(HORIZONTAL, (0,0,1), yellow)"/>
+			<blockBackground start="0,2" stop="1,2" colorName="(VERTICAL, red, green)"/>
+			<blockBackground start="0,3" stop="1,3" colorName="(VERTICAL2, blue, yellow)"/>
+			<blockBackground start="1,4" stop="1,4" colorName="(HORIZONTAL2, green, yellow)"/>
+			<blockBackground start="2,2" stop="2,2" colorName="LINEARGRADIENT,(0,0),(1,1),True, (0x8000, yellow, (1,0,0)), (0.25,0.5,0.75)"/>
+			<blockBackground start="2,3" stop="2,3" colorName="LINEARGRADIENT,(0,1),(1,0),True, (green, yellow, red), (0.25,0.5,0.75)"/>
+			<blockBackground start="1,5" stop="1,5" colorName="LINEARGRADIENT,(0,0),(1,0),True, (pink, lightgreen, lightblue), (0.25,0.5,0.75)"/>
+			<blockBackground start="0,6" stop="1,6" colorName="LINEARGRADIENT,(0,0),(0,1),True, (pink, lightgreen, lightblue), (0.25,0.5,0.75)"/>
+			<blockBackground start="2,6" stop="2,6" colorName="LINEARGRADIENT,(1,0.2),(0,0.8),True, (red, yellow, green, lightblue), (0.2,0.4,0.6,0.8)"/>
+			<blockBackground start="0,7" stop="0,7" colorName="RADIALGRADIENT,(0.5,0.5),(1,width),True, (red, yellow, green, lightblue), (0.2,0.4,0.6,0.8)"/>
+			<blockBackground start="1,7" stop="1,7" colorName="RADIALGRADIENT,(0.5,0.5),(1,height),True, (red, yellow, green, lightblue), (0.2,0.4,0.6,0.8)"/>
+			<blockBackground start="2,7" stop="2,7" colorName="RADIALGRADIENT,(0.6,0.4),(1,max),True, (red, yellow, green, lightblue), (0.2,0.4,0.6,0.8)"/>
+			<blockBackground start="0,8" stop="1,8" colorName="(LINEARGRADIENT,(0,1),(0,0),True,(blue, yellow, blue), (0.25,0.75,1))"/>
+			<blockBackground start="2,8" stop="2,8" colorName="LINEARGRADIENT,(0,1),(1,0),True, (green, yellow, green), (0.25,0.5,0.75)"/>
+		</blockTableStyle>
+		<paraStyle name="intro"  fontName="Helvetica" fontSize="12" leading="12" spaceAfter="12"/>
+	</stylesheet>
+	<story firstPageTemplate="main2">
+		<para style="intro">os.getcwd is {{cwd}}</para>
+		<para>Example table with lineargradient backgrounds</para>
+		<blockTable ident="plainlg000" htmlSpans="1" style="plainlg">
+			<tr><td>00</td><td>01</td><td>02</td></tr>
+			<tr><td>10</td><td align="center">11 this is a long string</td><td>12</td></tr>
+			<tr><td>20
+this is the
+end
+my friend</td><td vAlign="middle">21
+the bells of hell
+go ting-aling-aling</td><td vAlign="top">22
+despair all who
+enter here</td></tr>
+			<tr><td>30
+this is the
+end
+my friend</td><td vAlign="middle">31
+the bells of hell
+go ting-aling-aling</td><td vAlign="top">32
+despair all who
+enter here</td></tr>
+			<tr><td>40</td><td align="center">41 this is a long string</td><td>42</td></tr>
+			<tr><td>50</td><td>51</td><td>52</td></tr>
+			<tr><td>60
+this is the
+end
+my friend</td><td vAlign="middle">61
+the bells of hell
+go ting-aling-aling</td><td vAlign="top">62
+despair all who
+enter here</td></tr>
+			<tr><td>70
+this is the
+end
+my friend</td><td vAlign="middle">71
+the bells of hell
+go ting-aling-aling</td><td vAlign="top">72
+despair all who
+enter here</td></tr>
+			<tr><td>80
+this is the
+end
+my friend</td><td vAlign="middle">81
+the bells of hell
+go ting-aling-aling</td><td vAlign="top">82
+despair all who
+enter here</td></tr>
+		</blockTable>
+<nextPage/>
+		<para style="intro">The image file will be {{os.path.join(rmldir,pdfImage)}}</para>
+		<illustration width="4.01in" height="3.01in">
+		<image file="{{os.path.join(rmldir,pdfImage)}}" type="pdf" x="0" y="0" width="4in" height="3in"/>
+		</illustration>
+		<bookmark name="BACK_PAGE"/>
+	</story>
+</document>
