@@ -9,16 +9,20 @@ demonstrate pdf generation with a command line, django command an view
 3) in noddy-pdf activate the python
 	source bin/activate
 
-4) migrate with
+4) install dependencies
+	python -mpip install --upgrade pip
+	pip install -r requirements.txt
+
+5) migrate with
 	./manage.py migrate
 
-5) generate using cli
+6) generate using cli
 	python -mproject.noddy.doc
 
-6) generate using django command
+7) generate using django command
 	./manage.py generate_pdf
 
-7) generate using a the view
+8) generate using a the view
 	./manage.py runserver
 
-	visit http://localhost:8000/pdf
+	visit http://localhost:8000/noddy/pdf
